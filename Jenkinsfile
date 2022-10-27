@@ -21,5 +21,10 @@ pipeline {
                  '''
             }
         }
+        stage('Selecting env') {
+            steps {
+               echo "Here u can select env"
+            }
+        }
     }
 }
