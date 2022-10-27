@@ -9,6 +9,11 @@ pipeline {
                sh 'mvn clean install'
             }
         }
+        stage('unit test case') {
+            steps {
+               echo "Here u can run unit test case"
+            }
+        }
         stage('copyting into tomcat server') {
             steps {
               sh '''scp $WORKSPACE/target/*.war ansadmin@172.31.26.161:~
